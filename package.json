@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "sass": "sass --no-source-map --style=compressed sass/*.scss css/*.min.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "sass": "^1.54.0"
+  }
+}
