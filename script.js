@@ -1,4 +1,4 @@
-const states = [
+document.querySelector('#state').innerHTML = [
   { abbreviation: '', name: '' },
   { abbreviation: 'AL', name: 'Alabama' },
   { abbreviation: 'AK', name: 'Alaska' },
@@ -50,9 +50,7 @@ const states = [
   { abbreviation: 'WV', name: 'West Virginia' },
   { abbreviation: 'WI', name: 'Wisconsin' },
   { abbreviation: 'WY', name: 'Wyoming' },
-];
-
-document.querySelector('#state').innerHTML = states
+]
   .map((state) => {
     const option = document.createElement('option');
     option.innerText = state.name;
