@@ -1,4 +1,6 @@
 body {
+  background: linear-gradient(#2b190f, #000);
+  color: #fff;
   display: flex;
   flex-flow: column;
 }

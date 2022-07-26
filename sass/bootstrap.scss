@@ -1,1 +1,21 @@
+$primary: #512F1C;
+$secondary: #774529;
+
+$component-active-bg: $secondary;
+$input-btn-focus-box-shadow: 0 0 0 0.25rem #ff8233;
+
+$btn-focus-box-shadow: $input-btn-focus-box-shadow;
+$form-check-input-focus-box-shadow: $input-btn-focus-box-shadow;
+$form-select-focus-box-shadow: $input-btn-focus-box-shadow;
+$input-focus-box-shadow: $input-btn-focus-box-shadow;
+
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.form-control,
+.form-select {
+  border-radius: unset;
+}
+
+.form-text {
+  color: #fff;
+}
