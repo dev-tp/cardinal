@@ -69,7 +69,11 @@
       <br />
       <p>Cardinal Roger Mahony</p>
     </div>
-    <form class="row g-3">
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdQdahH1qK5V0zS8VyqP-5rLXrRqOARxTI-Sb3JfjlDa44mHw/formResponse"
+      class="row g-3"
+      method="POST"
+    >
       <div class="col-md-6">
         <label class="form-label" for="first-name"
           >First Name <span class="required">*</span></label
@@ -77,7 +81,7 @@
         <input
           class="form-control"
           id="first-name"
-          name="first-name"
+          name="entry.1888928138"
           required
           type="text"
         />
@@ -89,7 +93,7 @@
         <input
           class="form-control"
           id="last-name"
-          name="last-name"
+          name="entry.1128145990"
           required
           type="text"
         />
@@ -101,7 +105,7 @@
         <input
           class="form-control"
           id="email"
-          name="email"
+          name="emailAddress"
           placeholder="user@example.com"
           required
           type="email"
@@ -112,7 +116,7 @@
         <input
           class="form-control"
           id="phone"
-          name="phone"
+          name="entry.1046242339"
           placeholder="(123) 456-7890"
           type="tel"
         />
@@ -124,7 +128,7 @@
         <input
           class="form-control"
           id="address-line-1"
-          name="address-line-1"
+          name="entry.271551969"
           placeholder="1234 Main St."
           required
           type="text"
@@ -135,7 +139,7 @@
         <input
           class="form-control"
           id="address-line-2"
-          name="address-line-2"
+          name="entry.1827057570"
           placeholder="Apartment, studio, or floor"
           type="text"
         />
@@ -145,7 +149,7 @@
         <input
           class="form-control"
           id="city"
-          name="city"
+          name="entry.994656445"
           required
           type="text"
         />
@@ -155,7 +159,7 @@
         <input
           class="form-control"
           id="state"
-          name="state"
+          name="entry.1817889293"
           required
           type="text"
         />
@@ -165,13 +169,13 @@
         <input
           class="form-control"
           id="zip-code"
-          name="zip-code"
+          name="entry.626573808"
           required
           type="text"
         />
       </div>
       <div class="col-md-12">
-        <label for="signed-copy"
+        <label
           >Do you wish the photo to be signed?
           <span class="required">*</span>
         </label>
@@ -197,6 +201,7 @@
           />
           <label class="form-check-label" for="signed-copy-no">No</label>
         </div>
+        <input type="hidden" name="entry.10683429" />
       </div>
       <div class="col-md-12">
         <label class="form-label" for="special-dedications"
@@ -205,13 +210,26 @@
         <input
           class="form-control"
           id="special-dedications"
-          name="special-dedications"
+          name="entry.374163587"
           type="text"
         />
       </div>
       <div class="col-12">
-        <input class="btn btn-primary" type="button" value="Submit" />
+        <input class="btn btn-primary" type="submit" value="Submit" />
       </div>
     </form>
+    <script>
+      document
+        .querySelectorAll('input[name="signed-copy"]')
+        .forEach((input) => {
+          const target = document.querySelector('input[name="entry.10683429"]');
+
+          if (input.checked) {
+            target.value = input.value;
+          }
+
+          input.onclick = () => (target.value = input.value);
+        });
+    </script>
   </body>
 </html>
