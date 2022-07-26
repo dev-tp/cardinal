@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+form {
+  align-self: flex-start;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+.letter {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 2;
+  padding-right: 1rem;
+}
+
+.required {
+  color: #f00;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    flex-flow: row;
+  }
+}
