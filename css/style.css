@@ -20,6 +20,13 @@ form {
   color: #f00;
 }
 
+#memo {
+  margin-top: -70px;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+  z-index: -1;
+}
+
 @media only screen and (min-width: 992px) {
   body {
     flex-flow: row;
