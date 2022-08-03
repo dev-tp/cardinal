@@ -1,17 +1,3 @@
-function toggleDedicationField(input) {
-  const wrapper = document.getElementById('memo');
-
-  if (input.value === 'Yes') {
-    wrapper.style.marginTop = 0;
-    wrapper.style.opacity = 1;
-    wrapper.style.zIndex = 1;
-  } else {
-    wrapper.style.marginTop = '-70px';
-    wrapper.style.opacity = 0;
-    wrapper.style.zIndex = -1;
-  }
-}
-
 document.querySelector('#state').innerHTML = [
   { abbreviation: '', name: '' },
   { abbreviation: 'AL', name: 'Alabama' },
@@ -73,16 +59,5 @@ document.querySelector('#state').innerHTML = [
   })
   .join('');
 
-document.querySelectorAll('input[name="signed-copy"]').forEach((input) => {
-  const target = document.querySelector('input[name="entry.10683429"]');
-
-  if (input.checked) {
-    target.value = input.value;
-    toggleDedicationField(input);
-  }
-
-  input.onclick = () => {
-    target.value = input.value;
-    toggleDedicationField(input);
-  };
-});
+document.getElementById('signed-copy').onclick = (event) =>
+  (event.target.value = event.target.checked ? 'Yes' : 'No');
